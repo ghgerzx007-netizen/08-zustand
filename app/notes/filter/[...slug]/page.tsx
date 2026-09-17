@@ -16,11 +16,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  
   return {
     title:`You are read ${noteFilter.toLowerCase()} notes`,
-    description: `You are read once notes`,
+    description: `You are read ${noteFilter.toLowerCase()} notes`,
     openGraph: {
       title:`You are read ${noteFilter} notes `,
-      description: `You are read once notes`,
-      url:"https://notehub.com/",
+      description: `You are read ${noteFilter.toLowerCase()} notes`,
+      url:`https://notehub.com/${noteFilter}`,
       images: [
         {
           url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",
