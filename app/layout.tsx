@@ -12,9 +12,20 @@ const roboto = Roboto({
   display: 'swap', 
 });
 export const metadata: Metadata = {
-  title: 'NoteHub',
-  description: 'Cloud notes',
-};
+  title: 'Create Note | NoteHub',
+  description: 'Create a new note in NoteHub with automatic draft saving so your progress is not lost.',
+  openGraph: {
+    title: 'Create Note | NoteHub',
+    description: 'Create a new note in NoteHub with automatic draft saving so your progress is not lost.',
+    images: [{
+      url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",
+      width: 1200,
+      height: 683,
+      alt: "NoteHub preview image"
+    }],
+  }
+}
+
 export default function RootLayout({
   children,
   modal,

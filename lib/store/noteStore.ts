@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import {persist} from "zustand/middleware"
 import { NoteTag } from "@/types/note";
-import { stat } from "fs";
+
 
 export type NoteDraft = {
   title: string;

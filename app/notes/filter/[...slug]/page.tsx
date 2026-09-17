@@ -7,7 +7,7 @@ import { fetchNotes, } from "@/lib/api";
 import NotesClient from "./Notes.client";
 import { Metadata } from "next";
 type Props = {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string[] }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -16,10 +16,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  
   return {
     title:`You are read ${noteFilter.toLowerCase()} notes`,
-    description: ``,
+    description: `You are read once notes`,
     openGraph: {
       title:`You are read ${noteFilter} notes `,
-      description: ``,
+      description: `You are read once notes`,
       url:"https://notehub.com/",
       images: [
         {
